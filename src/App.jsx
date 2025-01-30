@@ -25,15 +25,34 @@
 
 
 
-import Card from "./componet/card"
+// import Card from "./componet/card"
+// import "./App.css";
+// function App() {
+//   return<>
+//   <Card/>
+  
+//   </>
+  
+// }
+// export default App
+
+
+
+// src/App.js
+import React from "react";
+import Header from "./componet/heading";
+import "./App.css";
+
 function App() {
-  return<>
-  <Card/>
-  
-  </>
-  
+  return (
+    <div className="App">
+      <Header />
+      <p>This is a simple React app.</p>
+    </div>
+  );
 }
-export default App
+
+export default App;
 
 
 
