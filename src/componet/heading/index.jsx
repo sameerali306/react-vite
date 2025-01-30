@@ -1,9 +1,12 @@
-function  Heading3({heading}) {
-  return(
-    <>
-      <h3>{heading}</h3>
-</>
-  )
-}
-
-export default Heading3
+// function Massage() {
+//       return
+//       <h1>Hello World</h1>
+      
+// }
+// export default Massage
+function Massage({text}) {
+      return <h1>{text}</h1>;
+    }
+    
+    export default Massage;
+    
