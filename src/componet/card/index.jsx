@@ -1,9 +1,11 @@
+import './Card.css';
+
 function Card() {
     return(
         <div className="card">
             <h1>Medium</h1>
             <p>Sign up to discover human stories that deepen your understanding of the world</p>
-            <div className="inner card">
+            <div className="inner card" >
                 <h3>free</h3>
                 <ul>
                     <li>Destruction free reading no adds</li>
