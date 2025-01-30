@@ -1,11 +1,11 @@
-import './componet/Card.css';
+
 
 function Card() {
     return(
         <div className="card">
             <h1>Medium</h1>
             <p>Sign up to discover human stories that deepen your understanding of the world</p>
-            <div className="inner card" >
+            <div className="inner " >
                 <h3>free</h3>
                 <ul>
                     <li>Destruction free reading no adds</li>
@@ -13,8 +13,10 @@ function Card() {
                     <li>Tell your story find your audience</li>
                     <button>Sign up for free</button>
                 </ul>
-            </div>
-            <div className="inner card2">
+                
+           
+                </div>
+            <div className=" card2">
                 <h3>Membership</h3>
                 <ul>
                     <li>Read member only story</li>
@@ -25,6 +27,7 @@ function Card() {
                     <button>Try up for $5/month</button>
                 </ul>
             </div>
+            
         </div>
     
     )

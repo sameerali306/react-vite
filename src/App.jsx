@@ -25,34 +25,35 @@
 
 
 
-// import Card from "./componet/card"
-// import "./App.css";
-// function App() {
-//   return<>
-//   <Card/>
+
+import "./App.css";
+import Card from "./componet/card"
+function App() {
+  return<>
+  <Card/>
   
-//   </>
+  </>
   
-// }
-// export default App
+}
+export default App
 
 
 
 // src/App.js
-import React from "react";
-import Header from "./componet/heading";
-import "./App.css";
+// import React from "react";
+// import Header from "./componet/heading";
+// import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <p>This is a simple React app.</p>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <Header />
+//       <p>This is a simple React app.</p>
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 
