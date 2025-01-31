@@ -48,7 +48,7 @@
     font-family: Arial, sans-serif;
 } */
 
-.card h1 {
+/* .card h1 {
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
@@ -118,7 +118,7 @@ button:hover {
 
   
 
-.card {
+/* .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,6 +165,27 @@ button:hover {
   .card2 button:hover {
     background-color: #005f72;
   }
+   
   
+   */
+
+   .card{
+    background-color:green;
+    width: 80%;
   
+
+   }
+   .card button{
+    background-color: blue;
+    width: 150px;
+    padding: 5px;
   
+   }
+   body{
+    /* background-color: yellow; */
+   }
+   *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
