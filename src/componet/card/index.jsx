@@ -35,13 +35,13 @@
 // export default Card
 
 
-
-function Card({header,para,button,Image1,Image2}) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+function Card({header,para,btnIcon}) {
     return(
         <div className="card">
             <h1>{header}</h1>
             <p>{para}</p>
-            <button>{button}</button>
+            <button><FontAwesomeIcon icon={btnIcon}/></button>
             
            
 
