@@ -59,17 +59,39 @@
 // export default App;
 
 
-import Card from "./componet/card";
+// import Card from "./componet/card2";
+// import "./App.css";
+// function App() {
+//   return<>
+//     <Card/>
+  
+//    </>
+  
+  
+// }
+// export default App;
+// import Apple from "./componet/card2"
+
+// function App() {
+//   return<>
+//   <Apple text={"helo"}/>
+  
+//   </>
+  
+// }
+// export default App
+
+import Header from "./componet/heading"
+import Para from "./componet/para"
 import "./App.css";
 function App() {
   return<>
-    <Card/>
-  
-   </>
-  
+  <Header header={"The modern landing page for React Developer"}/>
+  <Para text={"The easiest way to build a React page in seconds your time and focus on your products"}/>
+  </>
   
 }
-export default App;
+export default App
 
 
 
