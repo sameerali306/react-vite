@@ -81,29 +81,41 @@
 
 
 
-import {useState} from "react";
+// import {useState} from "react";
 
-import "./App.css";
-// import Counter from "./componet/counter";
-function App() {
-  const[Counter,setCounter]=useState(0)
-  return(
-    <div className="main">
-    <h1 className={`${Counter <0 && "negative"}`}>{Counter}</h1>
-    <div>
-      <button id="decrease" onClick={()=>setCounter(prev=>prev-1)}>decrement</button>
-      <button id="reset" onClick={()=>setCounter(0)}>Reset</button>
-      <button id="increase" onClick={()=>setCounter(prev=>prev+1)}>increment</button>
-    </div>
+// import "./App.css";
+// // import Counter from "./componet/counter";
+// function App() {
+//   const[Counter,setCounter]=useState(0)
+//   return(
+//     <div className="main">
+//     <h1 className={`${Counter <0 && "negative"}`}>{Counter}</h1>
+//     <div>
+//       <button id="decrease" onClick={()=>setCounter(prev=>prev-1)}>decrement</button>
+//       <button id="reset" onClick={()=>setCounter(0)}>Reset</button>
+//       <button id="increase" onClick={()=>setCounter(prev=>prev+1)}>increment</button>
+//     </div>
     
-    </div>
-  )
+//     </div>
+//   )
 
   
+  
+// }
+// export default App
+
+
+
+import Nav from "./componet/nav/indes";
+import HeroSection from "./componet/nav/hero"
+import "./App.css";
+function App() {
+  return(
+    <>
+    <Nav/>
+    <HeroSection/>
+    </>
+  )
   
 }
 export default App
-
-
-
-

@@ -1,4 +1,4 @@
-.data{
+/* .data{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2em;
   padding: 10px;
@@ -24,27 +24,27 @@
 .main{
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  /* align-items: center;
   flex-direction: column;
-}
-h1{
-  font-size: 8rem;
+} */
+/* h1{ */
+  /* font-size: 8rem; */
   
-}
-#decrease{
+/* } */
+/* #decrease{
   border: none;
   margin: 5px;
   padding: 10px;
   color: white;
   background-color: green;
   font-weight: 500;
-  border-radius: 8px;
-}
+  border-radius: 8px; */ 
+/* }
 #increase{
   border: none;
   margin: 5px;
-  padding: 10px;
-  color: white;
+  padding: 10px; */
+  /* color: white;
   background-color: green;
   font-weight: 500;
   border-radius: 8px;
@@ -52,12 +52,107 @@ h1{
 #reset{
   border: none;
   margin: 5px;
-  padding: 10px;
-  color: white;
+  padding: 10px; */
+  /* color: white;
   background-color: red;
   font-weight: 500;
   border-radius: 8px;
 }
 .negative{
   color: red;
+} */
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ :root{
+  --red:#d01c28;
+  --gray:#2e2e2e;
+
+ }
+.logo img{
+  all: unset;
+  width: 100px;
+  height: 32px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 72px;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+nav button{
+  all: unset;
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+}
+.main{
+  display: flex;
+  margin: 0 auto;
+  width: 1280px;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh-72px);
+  margin-top: 100px;
+}
+.brand-icon{
+  display: flex;
+  height: 100px;
+  gap: 16px;
+}
+.Hero-content{
+  width: 50%;
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+}
+.Hero-content h1{
+  font-size: 108px;
+  font-weight: 800;
+  line-height: 102px;
+ 
+}
+.Hero-content p{
+  max-width: 400px;
+color: var(--gray);
+  font-weight: 600;
+  
+}
+.Hero-button{
+  display: flex;
+  gap: 40px;
+  font-size: 24px;
+}
+.btn1{
+  background-color: #d01c28;
+  color: white;
+  padding: 10px;
+}
+.btn2{
+  background: transparent;
+  color: var(--gray);
+  border: 1px solid gray;
+  padding: 10px;
+}
+.shopping p{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.Hero-image{
+  transform: scale(1.5);
+margin-right:4px ;
 }
