@@ -54,49 +54,55 @@
 
 // export default
 // 
-// 
-import Student from "./componet/student"
-import "./App.css";
-
-function App() {
-  return(<>
-  <Student fname="Sameer Ali" age={19} isStudent={true}/>
-  <Student fname="shahzain" age={22} isStudent={true}/>
-  <Student fname="Ali sher" age={32} isStudent={false}/>
-  </>
-  )
-}
-export default App;
+//
 
 
-
-
-
-
-
-
-
-
-
-
-// import {useState} from "react";
+// import Student from "./componet/student"
 // import "./App.css";
+
 // function App() {
-//   const[Counter,setCounter]=useState(0)
-//   return(
-//     <div className="main">
-//     <h1 className={`${Counter <0 && "negative"}`}>{Counter}</h1>
-//     <div>
-//       <button id="decrease" onClick={()=>setCounter(prev=>prev-1)}>decrement</button>
-//       <button id="reset" onClick={()=>setCounter(0)}>Reset</button>
-//       <button id="increase" onClick={()=>setCounter(prev=>prev+1)}>increment</button>
-//     </div>
-    
-//     </div>
+//   return(<>
+//   <Student fname="Sameer Ali" age={19} isStudent={true}/>
+//   <Student fname="shahzain" age={22} isStudent={true}/>
+//   <Student fname="Ali sher" age={32} isStudent={false}/>
+//   </>
 //   )
-  
 // }
-// export default App
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+import {useState} from "react";
+
+import "./App.css";
+// import Counter from "./componet/counter";
+function App() {
+  const[Counter,setCounter]=useState(0)
+  return(
+    <div className="main">
+    <h1 className={`${Counter <0 && "negative"}`}>{Counter}</h1>
+    <div>
+      <button id="decrease" onClick={()=>setCounter(prev=>prev-1)}>decrement</button>
+      <button id="reset" onClick={()=>setCounter(0)}>Reset</button>
+      <button id="increase" onClick={()=>setCounter(prev=>prev+1)}>increment</button>
+    </div>
+    
+    </div>
+  )
+
+  
+  
+}
+export default App
 
 
 
