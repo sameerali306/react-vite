@@ -1,40 +1,63 @@
-/* src/App.css */
+.data{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 50%, 0.8);
+}
+.data p{
+  margin: 0;
+}
 
-.App {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-  }
+
+
+
+
+
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.main{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-size: 8rem;
   
-  header {
-    background-color: #4CAF50;
-    padding: 20px;
-    color: white;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
+#decrease{
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  background-color: green;
+  font-weight: 500;
+  border-radius: 8px;
+}
+#increase{
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  background-color: green;
+  font-weight: 500;
+  border-radius: 8px;
+}
+#reset{
+  border: none;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+  background-color: red;
+  font-weight: 500;
+  border-radius: 8px;
+}
+.negative{
+  color: red;
+}
