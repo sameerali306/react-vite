@@ -106,16 +106,49 @@
 
 
 
-import Nav from "./componet/nav/indes";
-import HeroSection from "./componet/nav/hero"
-import "./App.css";
+// import Nav from "./componet/nav/indes";
+// import HeroSection from "./componet/nav/hero"
+// import "./App.css";
+// function App() {
+//   return(
+//     <>
+//     <Nav/>
+//     <HeroSection/>
+//     </>
+//   )
+  
+// }
+// export default App
+
+import React, {useState , useEffect} from "react";
+
 function App() {
-  return(
-    <>
-    <Nav/>
-    <HeroSection/>
-    </>
-  )
+  const[Counter, setCounter]=useState(0)
+ 
+
+  useEffect(()=>{
+    document.title=`Count: ${Counter}`
+  }, )
+
+  function addCount() {
+    setCounter(c=>c+1)
+    
+  }
+  function lessCount() {
+    setCounter(c=>c-1)
+
+   
+
+    
+  }
+ 
+    
+  
+  return<>
+  <p>Count:{Counter}</p>
+  <button onClick={addCount}>add</button>
+  <button onClick={lessCount}>substract</button>
+  </>
   
 }
 export default App
