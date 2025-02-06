@@ -121,14 +121,31 @@
 // export default App
 
 import React, {useState , useEffect} from "react";
+import "./App.css"
+import Card from "./componet/unmount"
+import Button from "./componet/button";
 
 function App() {
+ 
   const[Counter, setCounter]=useState(0)
+  // const[state,setstate]=useState(true) 
  
 
   useEffect(()=>{
-    document.title=`Count: ${Counter}`
-  }, )
+    console.log("counter mounted");
+
+    return function () {
+      console.log("unmunt counter.....");
+      
+      
+    }
+    
+  },[] )
+
+  useEffect(()=>{
+    console.log("counter updated.....");
+    
+  },[Counter])
 
   function addCount() {
     setCounter(c=>c+1)
@@ -136,18 +153,24 @@ function App() {
   }
   function lessCount() {
     setCounter(c=>c-1)
-
-   
-
-    
-  }
+}
+function reset() {
+  setCounter(0)
+  
+}
  
     
   
   return<>
-  <p>Count:{Counter}</p>
-  <button onClick={addCount}>add</button>
-  <button onClick={lessCount}>substract</button>
+  <div className="div">
+  
+  <p className="para">Count:{Counter}</p>
+  <button onClick={addCount} className="btn">add</button>
+  <button onClick={reset} className="btn">Reset</button>
+  <button onClick={lessCount} className="btn">substract</button>
+  <Button text={"toggle"}/>
+  </div>
+ 
   </>
   
 }
