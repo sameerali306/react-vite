@@ -120,58 +120,89 @@
 // }
 // export default App
 
-import React, {useState , useEffect} from "react";
-import "./App.css"
-import Card from "./componet/unmount"
-import Button from "./componet/button";
+// import React, {useState , useEffect} from "react";
+// import "./App.css"
+// import Card from "./componet/unmount"
+// import Button from "./componet/button";
 
-function App() {
+// function App() {
  
-  const[Counter, setCounter]=useState(0)
-  // const[state,setstate]=useState(true) 
+//   const[Counter, setCounter]=useState(0)
+//   // const[state,setstate]=useState(true) 
  
 
-  useEffect(()=>{
-    console.log("counter mounted");
+//   useEffect(()=>{
+//     console.log("counter mounted");
 
-    return function () {
-      console.log("unmunt counter.....");
+//     return function () {
+//       console.log("unmunt counter.....");
       
       
-    }
+//     }
     
-  },[] )
+//   },[] )
 
-  useEffect(()=>{
-    console.log("counter updated.....");
+//   useEffect(()=>{
+//     console.log("counter updated.....");
     
-  },[Counter])
+//   },[Counter])
 
-  function addCount() {
-    setCounter(c=>c+1)
+//   function addCount() {
+//     setCounter(c=>c+1)
     
-  }
-  function lessCount() {
-    setCounter(c=>c-1)
-}
-function reset() {
-  setCounter(0)
+//   }
+//   function lessCount() {
+//     setCounter(c=>c-1)
+// }
+// function reset() {
+//   setCounter(0)
   
-}
+// }
  
     
   
-  return<>
-  <div className="div">
+//   return<>
+//   <div className="div">
   
-  <p className="para">Count:{Counter}</p>
-  <button onClick={addCount} className="btn">add</button>
-  <button onClick={reset} className="btn">Reset</button>
-  <button onClick={lessCount} className="btn">substract</button>
-  <Button text={"toggle"}/>
-  </div>
+//   <p className="para">Count:{Counter}</p>
+//   <button onClick={addCount} className="btn">add</button>
+//   <button onClick={reset} className="btn">Reset</button>
+//   <button onClick={lessCount} className="btn">substract</button>
+//   <Button text={"toggle"}/>
+//   </div>
  
-  </>
+//   </>
   
-}
-export default App
+// }
+// export default App
+
+
+// import Start from "./componet/quiz/start";
+// import Quiz from "./componet/quiz/Quiz";
+// import Result from "./componet/quiz/result";
+// import ReactDom from "react-dom"
+// ReactDOM.return(<App/> ,document.getElementById("root"))
+
+
+
+// function App() {
+//  return(
+//   <button/>
+//  )
+  
+// }
+// export default App
+
+import React, { useEffect, useState } from "react";
+// import "./App.css"
+export default function Home() {
+    const[num,setnum]=useState(0)
+    useEffect(()=>{
+        document.title=`you click me ${num} times`
+    })
+    return (
+    <button onClick={()=>{
+        setnum(num+1)
+    }}>click me {num}</button>
+    )
+}  
