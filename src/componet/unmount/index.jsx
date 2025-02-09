@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-function Card({text}) {
-const[state,setstate]=useState<Boolean>(true)    
+function Card() {   
 return <>
-return(
-    <button onClick={e=>setstate(!state)} >{text}</button>
-    {state ? <Counter/> : ""}
-)
+
+    <button onClick={open} >toggle</button>
+
 </>
 }
 export default Card
