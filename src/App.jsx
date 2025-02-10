@@ -174,32 +174,55 @@
 // }
 // export default App
 
-import { useState,useRef } from "react";
+// import { useState,useRef } from "react";
+// function App() {
+//     const refElement=useRef("");
+//     const[ fname,setfname]=useState("sameer")
+// console.log(refElement);
+// function reset() {
+//     setfname("")
+//     refElement.current.focus()
+
+// }
+// function colorfull() {
+//     refElement.current.style.color="blue"
+    
+// }
+//     return<>
+//     <h1>learning useref</h1>
+//     <input ref={refElement} type="text" value={fname} onChange={(e)=>setfname(
+//         e.target.value
+
+//     )}/>
+//     <button onClick={reset}>Reset</button>
+//     <button onClick={colorfull}>chnage color</button>
+    
+//     </>}
+//     export default App
+    
+import React, { useState } from 'react';
+import './App.css';
+
 function App() {
-    const refElement=useRef("");
-    const[ fname,setfname]=useState("sameer")
-console.log(refElement);
-function reset() {
-    setfname("")
-    refElement.current.focus()
+  // State to store the counter value
+  const [count, setCount] = useState(0);
 
-}
-function colorfull() {
-    refElement.current.style.color="blue"
-    
-}
-    return<>
-    <h1>learning useref</h1>
-    <input ref={refElement} type="text" value={fname} onChange={(e)=>setfname(
-        e.target.value
+  // Function to increase the count
+  const increase = () => setCount(count + 1);
 
-    )}/>
-    <button onClick={reset}>Reset</button>
-    <button onClick={colorfull}>chnage color</button>
-    
-    </>}
-    export default App
-    
+  // Function to decrease the count
+  const decrease = () => setCount(count - 1);
+
+  return (
+    <div className="App">
+      <h1>Simple Counter App</h1>
+      <p>Count: {count}</p>
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease}>Decrease</button>
+    </div>
+  );
+}
+
 
 
 
