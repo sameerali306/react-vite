@@ -1,0 +1,14 @@
+list=[6,2,5,4,3,1]
+print(list)
+list.append(7)
+print(list)
+list.sort()
+print(list)
+list.sort(reverse=True)
+print(list)
+student=["pineapple","mango","banana","apple","grape"]
+student.sort()
+print(student)
+student=["sameer","faria","nazir","shahzain"]
+student.reverse()
+print(student)
