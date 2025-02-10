@@ -122,83 +122,86 @@
 // export default App
 
 
-// import { useState ,useEffect } from "react";
-// import Card from "./componet/unmount";
+import { useState ,useEffect } from "react";
+import Card from "./componet/unmount";
 
-// function App() {
-//     const[Counter,setCounter]=useState(0)
-
-//     useEffect(()=>{
-//         console.log("counter mounted");
-        
-            
-            
-        
-//     },[])
-
-    
-//     useEffect(()=>{
-//         console.log("user update the count...");
-        
-//     },[Counter])
-
-//     const open=()=>{
-//         console.log("unmounted " );
-        
-//     }
-
-//     const counterIncrease=()=>{
-//         setCounter(prev=>prev+1) 
-    
-        
-//     }
-//     const counterDecrease=()=>{
-//         setCounter(prev=>prev-1) 
-
-        
-//     }
-//     const counterReset=()=>{
-//         setCounter(0)
-//     }
-   
-//     return(
-//         <>
-//         <Card/>
-//         <h1>Counter:{Counter}</h1>
-//         <button onClick={counterIncrease}>increment</button>
-//         <button onClick={counterReset}>Reset</button>
-//         <button onClick={counterDecrease}>decrement</button>
-//         </>
-
-//     )
-// }
-// export default App
-
-import { useState,useRef } from "react";
 function App() {
-    const refElement=useRef("");
-    const[ fname,setfname]=useState("sameer")
-console.log(refElement);
-function reset() {
-    setfname("")
-    refElement.current.focus()
+    const[Counter,setCounter]=useState(0)
 
-}
-function colorfull() {
-    refElement.current.style.color="blue"
-    
-}
-    return<>
-    <h1>learning useref</h1>
-    <input ref={refElement} type="text" value={fname} onChange={(e)=>setfname(
-        e.target.value
+    useEffect(()=>{
+        console.log("counter mounted");
+        
+            
+            
+        
+    },[])
+    useEffect(()=>{
+        document.title=`Counter: ${Counter}`
+    })
 
-    )}/>
-    <button onClick={reset}>Reset</button>
-    <button onClick={colorfull}>chnage color</button>
     
-    </>}
-    export default App
+    useEffect(()=>{
+        console.log("user update the count...");
+        
+    },[Counter])
+
+    const open=()=>{
+        console.log("unmounted " );
+        
+    }
+
+    const counterIncrease=()=>{
+        setCounter(prev=>prev+1) 
+    
+        
+    }
+    const counterDecrease=()=>{
+        setCounter(prev=>prev-1) 
+
+        
+    }
+    const counterReset=()=>{
+        setCounter(0)
+    }
+   
+    return(
+        <>
+        <Card/>
+        <h1>Counter:{Counter}</h1>
+        <button onClick={counterIncrease}>increment:{Counter}</button>
+        <button onClick={counterReset}>Reset:{Counter}</button>
+        <button onClick={counterDecrease}>decrement:{Counter}</button>
+        </>
+
+    )
+}
+export default App
+
+// import { useState,useRef } from "react";
+// function App() {
+//     const refElement=useRef("");
+//     const[ fname,setfname]=useState("sameer")
+// console.log(refElement);
+// function reset() {
+//     setfname("")
+//     refElement.current.focus()
+
+// }
+// function colorfull() {
+//     refElement.current.style.color="blue"
+    
+// }
+//     return<>
+//     <h1>learning useref</h1>
+//     <input ref={refElement} type="text" value={fname} onChange={(e)=>setfname(
+//         e.target.value
+
+//     )}/>
+//     <button onClick={reset}>Reset</button>
+//     <button onClick={colorfull}>chnage color</button>
+    
+//     </>}
+//     export default App
     
 
 
