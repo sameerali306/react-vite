@@ -200,30 +200,143 @@
 //     </>}
 //     export default App
     
-import React, { useState } from 'react';
-import './App.css';
+// import React, { useState } from 'react';
+// import './App.css';
 
-function App() {
-  // State to store the counter value
-  const [count, setCount] = useState(0);
+// function App() {
+//   // State to store the counter value
+//   const [count, setCount] = useState(0);
 
-  // Function to increase the count
-  const increase = () => setCount(count + 1);
+//   // Function to increase the count
+//   const increase = () => setCount(count + 1);
 
-  // Function to decrease the count
-  const decrease = () => setCount(count - 1);
+//   // Function to decrease the count
+//   const decrease = () => setCount(count - 1);
+
+//   return (
+//     <div className="App">
+//       <h1>Simple Counter App</h1>
+//       <p>Count: {count}</p>
+//       <button onClick={increase}>Increase</button>
+//       <button onClick={decrease}>Decrease</button>
+//     </div>
+//   );
+// }
+
+
+
+
+
+import React, { useReducer, useState } from 'react';
+
+// Action types
+const ADD_STUDENT = 'ADD_STUDENT';
+const UPDATE_GRADE = 'UPDATE_GRADE';
+const REMOVE_STUDENT = 'REMOVE_STUDENT';
+
+// Initial state
+const initialState = {
+  students: [
+    { id: 1, name: 'John Doe', grade: 85 },
+    { id: 2, name: 'Jane Smith', grade: 90 },
+  ],
+};
+
+// Reducer function
+const gradingReducer = (state, action) => {
+  switch (action.type) {
+    case ADD_STUDENT:
+      return {
+        ...state,
+        students: [
+          ...state.students,
+          { id: Date.now(), name: action.payload.name, grade: action.payload.grade },
+        ],
+      };
+    
+    case UPDATE_GRADE:
+      return {
+        ...state,
+        students: state.students.map(student =>
+          student.id === action.payload.id
+            ? { ...student, grade: action.payload.grade }
+            : student
+        ),
+      };
+      
+    case REMOVE_STUDENT:
+      return {
+        ...state,
+        students: state.students.filter(student => student.id !== action.payload.id),
+      };
+
+    default:
+      return state;
+  }
+};
+
+function GradingSystem() {
+  const [state, dispatch] = useReducer(gradingReducer, initialState);
+  const [name, setName] = useState('');
+  const [grade, setGrade] = useState('');
+  
+  const handleAddStudent = () => {
+    dispatch({
+      type: ADD_STUDENT,
+      payload: { name, grade: parseInt(grade) },
+    });
+    setName('');
+    setGrade('');
+  };
+  
+  const handleUpdateGrade = (id, newGrade) => {
+    dispatch({
+      type: UPDATE_GRADE,
+      payload: { id, grade: newGrade },
+    });
+  };
+  
+  const handleRemoveStudent = (id) => {
+    dispatch({
+      type: REMOVE_STUDENT,
+      payload: { id },
+    });
+  };
 
   return (
-    <div className="App">
-      <h1>Simple Counter App</h1>
-      <p>Count: {count}</p>
-      <button onClick={increase}>Increase</button>
-      <button onClick={decrease}>Decrease</button>
+    <div>
+      <h1>Grading System</h1>
+      <div>
+        <h2>Add New Student</h2>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Student Name"
+        />
+        <input
+          type="number"
+          value={grade}
+          onChange={(e) => setGrade(e.target.value)}
+          placeholder="Grade"
+        />
+        <button onClick={handleAddStudent}>Add Student</button>
+      </div>
+
+      <div>
+        <h2>Student Grades</h2>
+        <ul>
+          {state.students.map(student => (
+            <li key={student.id}>
+              {student.name} - Grade: {student.grade}
+              <button onClick={() => handleUpdateGrade(student.id, student.grade + 1)}>Increase Grade</button>
+              <button onClick={() => handleRemoveStudent(student.id)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
 
-
-
-
-    
+export default GradingSystem;
