@@ -223,74 +223,72 @@
 //   );
 // }
 
-import { useReducer } from "react";
+// import { useReducer } from "react";
 
-// Initial state
-const initialValue = {
-  studentName: "Sameer Ali",
-  Grade: "", // Initially empty grade
-};
+// // Initial state
+// const initialValue = {
+//   studentName: "Sameer Ali",
+//   Grade: "", // Initially empty grade
+// };
 
-// Reducer function to update grade based on the payload
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SET_GRADE":
-      const grade = action.payload;
-      if (grade >= 90) {
-        return {
-          ...state,
-          Grade: "A+",
-        };
-      } else if (grade >= 80 && grade < 90) {
-        return {
-          ...state,
-          Grade: "A",
-        };
-      } else if (grade >= 70 && grade < 80) {
-        return {
-          ...state,
-          Grade: "B",
-        };
-      } else if (grade >= 60 && grade < 70) {
-        return {
-          ...state,
-          Grade: "C",
-        };
-      } else if (grade >= 50 && grade < 60) {
-        return {
-          ...state,
-          Grade: "D",
-        };
-      } else {
-        return state; // Default case
-      }
+// // Reducer function to update grade based on the payload
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case "SET_GRADE":
+//       const grade = action.payload;
+//       if (grade >= 90) {
+//         return {
+//           ...state,
+//           Grade: "A+",
+//         };
+//       } else if (grade >= 80 && grade < 90) {
+//         return {
+//           ...state,
+//           Grade: "A",
+//         };
+//       } else if (grade >= 70 && grade < 80) {
+//         return {
+//           ...state,
+//           Grade: "B",
+//         };
+//       } else if (grade >= 60 && grade < 70) {
+//         return {
+//           ...state,
+//           Grade: "C",
+//         };
+//       } else if (grade >= 50 && grade < 60) {
+//         return {
+//           ...state,
+//           Grade: "D",
+//         };
+//       } else {
+//         return state; // Default case
+//       }
 
-    default:
-      return state; // Default return state if no matching action type
-  }
-};
+//     default:
+//       return state; // Default return state if no matching action type
+//   }
+// };
 
-// Component to display and update grade
-const Card = () => {
-  const [state, dispatch] = useReducer(reducer, initialValue);
+// // Component to display and update grade
+// const Card = () => {
+//   const [state, dispatch] = useReducer(reducer, initialValue);
 
-  const handleGradeChange = () => {
-    const grade = 60; // Set a grade value here
-    dispatch({ type: "SET_GRADE", payload: grade });
-  };
+//   const handleGradeChange = () => {
+//     const grade = 60; // Set a grade value here
+//     dispatch({ type: "SET_GRADE", payload: grade });
+//   };
 
-  return (
-    <div>
-      <h1>{state.studentName}</h1>
-      <p>Grade: {state.Grade}</p>
-      <button onClick={handleGradeChange}>Set Grade</button>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h1>{state.studentName}</h1>
+//       <p>Grade: {state.Grade}</p>
+//       <button onClick={handleGradeChange}>Set Grade</button>
+//     </div>
+//   );
+// };
 
-export default Card;
-
-
+// export default Card;
 
 
 
@@ -298,80 +296,82 @@ export default Card;
 
 
 
-import { useReducer } from "react";
 
-// Initial state
-const initialValue = {
-  studentName: "Sameer Ali",
-  Grade: "", // Initially empty grade
-};
 
-// Reducer function to update grade based on the payload
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "SET_GRADE":
-      const grade = action.payload;
-      if (grade >= 90) {
-        return {
-          ...state,
-          Grade: "A+",
-        };
-      } else if (grade >= 80 && grade < 90) {
-        return {
-          ...state,
-          Grade: "A",
-        };
-      } else if (grade >= 70 && grade < 80) {
-        return {
-          ...state,
-          Grade: "B",
-        };
-      } else if (grade >= 60 && grade < 70) {
-        return {
-          ...state,
-          Grade: "C",
-        };
-      } else if (grade >= 50 && grade < 60) {
-        return {
-          ...state,
-          Grade: "D",
-        };
-      } else {
-        return state; // Default case
-      }
+// import { useReducer } from "react";
 
-    default:
-      return state; // Default return state if no matching action type
-  }
-};
+// // Initial state
+// const initialValue = {
+//   studentName: "Sameer Ali",
+//   Grade: "", // Initially empty grade
+// };
 
-// Component to display and update grade
-const Card = () => {
-  const [state, dispatch] = useReducer(reducer, initialValue);
+// // Reducer function to update grade based on the payload
+// const reducer = (state, action) => {
+//   switch (action.type) {
+//     case "SET_GRADE":
+//       const grade = action.payload;
+//       if (grade >= 90) {
+//         return {
+//           ...state,
+//           Grade: "A+",
+//         };
+//       } else if (grade >= 80 && grade < 90) {
+//         return {
+//           ...state,
+//           Grade: "A",
+//         };
+//       } else if (grade >= 70 && grade < 80) {
+//         return {
+//           ...state,
+//           Grade: "B",
+//         };
+//       } else if (grade >= 60 && grade < 70) {
+//         return {
+//           ...state,
+//           Grade: "C",
+//         };
+//       } else if (grade >= 50 && grade < 60) {
+//         return {
+//           ...state,
+//           Grade: "D",
+//         };
+//       } else {
+//         return state; // Default case
+//       }
 
-  const handleGradeChange = () => {
-    const gradeInput = prompt("Enter your grade (0-100):");
+//     default:
+//       return state; // Default return state if no matching action type
+//   }
+// };
 
-    if (gradeInput !== null) {
-      const grade = parseInt(gradeInput, 10);
-      if (!isNaN(grade) && grade >= 0 && grade <= 100) {
-        dispatch({ type: "SET_GRADE", payload: grade });
-      } else {
-        alert("Please enter a valid grade between 0 and 100.");
-      }
-    }
-  };
+// // Component to display and update grade
+// const Card = () => {
+//   const [state, dispatch] = useReducer(reducer, initialValue);
 
-  return (
-    <div>
-      <h1>{state.studentName}</h1>
-      <p>Grade: {state.Grade}</p>
-      <button onClick={handleGradeChange}>Set Grade</button>
-    </div>
-  );
-};
+//   const handleGradeChange = () => {
+//     const gradeInput = prompt("Enter your grade (0-100):");
 
-export default Card;
+//     if (gradeInput !== null) {
+//       const grade = parseInt(gradeInput, 10);
+//       if (!isNaN(grade) && grade >= 0 && grade <= 100) {
+//         dispatch({ type: "SET_GRADE", payload: grade });
+//       } else {
+//         alert("Please enter a valid grade between 0 and 100.");
+//       }
+//     // }
+//   };
+
+//   return (
+//     <div>
+//       <h1>{state.studentName}</h1>
+//       <p>Grade: {state.Grade}</p>
+//       <button onClick={handleGradeChange}>Set Grade</button>
+//     </div>
+//   );
+// };
+
+// export default Card;
 
 
 
