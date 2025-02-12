@@ -223,120 +223,202 @@
 //   );
 // }
 
+import { useReducer } from "react";
+
+// Initial state
+const initialValue = {
+  studentName: "Sameer Ali",
+  Grade: "", // Initially empty grade
+};
+
+// Reducer function to update grade based on the payload
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET_GRADE":
+      const grade = action.payload;
+      if (grade >= 90) {
+        return {
+          ...state,
+          Grade: "A+",
+        };
+      } else if (grade >= 80 && grade < 90) {
+        return {
+          ...state,
+          Grade: "A",
+        };
+      } else if (grade >= 70 && grade < 80) {
+        return {
+          ...state,
+          Grade: "B",
+        };
+      } else if (grade >= 60 && grade < 70) {
+        return {
+          ...state,
+          Grade: "C",
+        };
+      } else if (grade >= 50 && grade < 60) {
+        return {
+          ...state,
+          Grade: "D",
+        };
+      } else {
+        return state; // Default case
+      }
+
+    default:
+      return state; // Default return state if no matching action type
+  }
+};
+
+// Component to display and update grade
+const Card = () => {
+  const [state, dispatch] = useReducer(reducer, initialValue);
+
+  const handleGradeChange = () => {
+    const grade = 60; // Set a grade value here
+    dispatch({ type: "SET_GRADE", payload: grade });
+  };
+
+  return (
+    <div>
+      <h1>{state.studentName}</h1>
+      <p>Grade: {state.Grade}</p>
+      <button onClick={handleGradeChange}>Set Grade</button>
+    </div>
+  );
+};
+
+export default Card;
 
 
 
 
-import React, { useReducer, useState } from 'react';
 
-// Action types
-const ADD_STUDENT = 'ADD_STUDENT';
-const UPDATE_GRADE = 'UPDATE_GRADE';
-const REMOVE_STUDENT = 'REMOVE_STUDENT';
+
+
+
+
+import { useReducer } from "react";
+
+// Initial state
+const initialValue = {
+  studentName: "Sameer Ali",
+  Grade: "", // Initially empty grade
+};
+
+// Reducer function to update grade based on the payload
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "SET_GRADE":
+      const grade = action.payload;
+      if (grade >= 90) {
+        return {
+          ...state,
+          Grade: "A+",
+        };
+      } else if (grade >= 80 && grade < 90) {
+        return {
+          ...state,
+          Grade: "A",
+        };
+      } else if (grade >= 70 && grade < 80) {
+        return {
+          ...state,
+          Grade: "B",
+        };
+      } else if (grade >= 60 && grade < 70) {
+        return {
+          ...state,
+          Grade: "C",
+        };
+      } else if (grade >= 50 && grade < 60) {
+        return {
+          ...state,
+          Grade: "D",
+        };
+      } else {
+        return state; // Default case
+      }
+
+    default:
+      return state; // Default return state if no matching action type
+  }
+};
+
+// Component to display and update grade
+const Card = () => {
+  const [state, dispatch] = useReducer(reducer, initialValue);
+
+  const handleGradeChange = () => {
+    const gradeInput = prompt("Enter your grade (0-100):");
+
+    if (gradeInput !== null) {
+      const grade = parseInt(gradeInput, 10);
+      if (!isNaN(grade) && grade >= 0 && grade <= 100) {
+        dispatch({ type: "SET_GRADE", payload: grade });
+      } else {
+        alert("Please enter a valid grade between 0 and 100.");
+      }
+    }
+  };
+
+  return (
+    <div>
+      <h1>{state.studentName}</h1>
+      <p>Grade: {state.Grade}</p>
+      <button onClick={handleGradeChange}>Set Grade</button>
+    </div>
+  );
+};
+
+export default Card;
+
+
+
+
+
+
+
+
+import { useReducer } from "react";
 
 // Initial state
 const initialState = {
-  students: [
-    { id: 1, name: 'John Doe', grade: 85 },
-    { id: 2, name: 'Jane Smith', grade: 90 },
-  ],
+  grade: "", // Initially empty grade
 };
 
-// Reducer function
-const gradingReducer = (state, action) => {
+// Reducer function to set the grade based on input
+const reducer = (state, action) => {
   switch (action.type) {
-    case ADD_STUDENT:
-      return {
-        ...state,
-        students: [
-          ...state.students,
-          { id: Date.now(), name: action.payload.name, grade: action.payload.grade },
-        ],
-      };
-    
-    case UPDATE_GRADE:
-      return {
-        ...state,
-        students: state.students.map(student =>
-          student.id === action.payload.id
-            ? { ...student, grade: action.payload.grade }
-            : student
-        ),
-      };
-      
-    case REMOVE_STUDENT:
-      return {
-        ...state,
-        students: state.students.filter(student => student.id !== action.payload.id),
-      };
-
+    case "SET_GRADE":
+      const grade = action.payload;
+      if (grade >= 90) return { ...state, grade: "A+" };
+      if (grade >= 80) return { ...state, grade: "A" };
+      if (grade >= 70) return { ...state, grade: "B" };
+      if (grade >= 60) return { ...state, grade: "C" };
+      if (grade >= 50) return { ...state, grade: "D" };
+      return { ...state, grade: "F" }; // F for below 50
     default:
       return state;
   }
 };
 
-function GradingSystem() {
-  const [state, dispatch] = useReducer(gradingReducer, initialState);
-  const [name, setName] = useState('');
-  const [grade, setGrade] = useState('');
-  
-  const handleAddStudent = () => {
-    dispatch({
-      type: ADD_STUDENT,
-      payload: { name, grade: parseInt(grade) },
-    });
-    setName('');
-    setGrade('');
-  };
-  
-  const handleUpdateGrade = (id, newGrade) => {
-    dispatch({
-      type: UPDATE_GRADE,
-      payload: { id, grade: newGrade },
-    });
-  };
-  
-  const handleRemoveStudent = (id) => {
-    dispatch({
-      type: REMOVE_STUDENT,
-      payload: { id },
-    });
+// Component to display and update grade
+const Card = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleGradeChange = () => {
+    const gradeInput = parseInt(prompt("Enter your grade (0-100):"), 10);
+    dispatch({ type: "SET_GRADE", payload: gradeInput });
   };
 
   return (
     <div>
-      <h1>Grading System</h1>
-      <div>
-        <h2>Add New Student</h2>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Student Name"
-        />
-        <input
-          type="number"
-          value={grade}
-          onChange={(e) => setGrade(e.target.value)}
-          placeholder="Grade"
-        />
-        <button onClick={handleAddStudent}>Add Student</button>
-      </div>
-
-      <div>
-        <h2>Student Grades</h2>
-        <ul>
-          {state.students.map(student => (
-            <li key={student.id}>
-              {student.name} - Grade: {student.grade}
-              <button onClick={() => handleUpdateGrade(student.id, student.grade + 1)}>Increase Grade</button>
-              <button onClick={() => handleRemoveStudent(student.id)}>Remove</button>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h1>Sameer Ali</h1>
+      <p>Grade: {state.grade}</p>
+      <button onClick={handleGradeChange}>Set Grade</button>
     </div>
   );
-}
+};
 
-export default GradingSystem;
+export default Card;
