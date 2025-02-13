@@ -17,7 +17,7 @@ function UseCallBackComp({ loggedIn }) {
     e.preventDefault();
     console.log("Email submitted");
     loginForm();  // Call the login function
-    loggedIn(email);  // If loggedIn is a parent function, pass email
+    // loggedIn(email);  // If loggedIn is a parent function, pass email
     setEmail("");  // Clear email field after submit
   };
 

@@ -42,22 +42,31 @@
 // export default Card;
 
 
-import { useCallback } from "react";
-import UseCallBackComp from "./componet/Callback";
-// import { Alert } from "bootstrap";
- function App(){
-// const[loggin,setloggin]=useState(false)
-// const[massage,setmassage]=useState(null)
+// import { useCallback } from "react";
+// import UseCallBackComp from "./componet/Callback";
+// // import { Alert } from "bootstrap";
+//  function App(){
+// // const[loggin,setloggin]=useState(false)
+// // const[massage,setmassage]=useState(null)
 
-// const loginForm=useCallback((email,password)=>{
-//   if(email==="example@gmail.com" && password===123456 ){
-//     setloggin(true)
-//     setmassage("loggin in successfully")
-//   }else{
-//     setmassage("loggin in fail")
-// }})
-  return(
-    <UseCallBackComp/>
-  )
- }
+// // const loginForm=useCallback((email,password)=>{
+// //   if(email==="example@gmail.com" && password===123456 ){
+// //     setloggin(true)
+// //     setmassage("loggin in successfully")
+// //   }else{
+// //     setmassage("loggin in fail")
+// // }})
+//   return(
+//     <UseCallBackComp/>
+//   )
+//  }
+// export default App
+
+import Form from "./componet/form"
+function App() {
+ return(
+  <Form/>
+ ) 
+  
+}
 export default App
