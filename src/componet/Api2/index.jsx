@@ -9,7 +9,7 @@ function PostApiExample() {
     setLoading(true);  
     try {
       
-      let response = await fetch("https://jsonplaceholder.typicode.com/post");
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts");
       if (!response.ok) {
         throw new Error("failed to fetch!!");
       }
