@@ -6,16 +6,20 @@ function PostApiExample() {
   const [loading, setLoading] = useState(false);
 
   const fetchPosts = async () => {
-    setLoading(true);  // Start loading before fetching
+    setLoading(true);  
     try {
-      let response = await fetch("https://jsonplaceholder.typicode.com/posts");
-      let data = await response.json();  // Get the data from the response
-      setPost(data);  // Set the fetched posts to the state
-      console.log(data);  // Log the data
+      
+      let response = await fetch("https://jsonplaceholder.typicode.com/post");
+      if (!response.ok) {
+        throw new Error("failed to fetch!!");
+      }
+      let data = await response.json();  
+      setPost(data);  
+      console.log(data); 
     } catch (error) {
-      setError(error.message);  // Set error message if any
+      setError(error.message); 
     } finally {
-      setLoading(false);  // Stop loading after the request is complete
+      setLoading(false);  
     }
   };
 
