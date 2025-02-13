@@ -1,0 +1,20 @@
+student=("sameer","faria","ali")
+print(student[0])
+print(student[1])
+print(student[2])
+#a single value tuplr can be written bt comman after it whaen commma can not written phython can treated as int or strring
+number=(1,)
+print(type (number))
+number=(1)
+print(type (number))
+animal=("cow","goat","monkey","dog","elephant","dog")
+print(animal[1:3])
+print(animal[1:4])
+print(animal[2:4])
+print(animal.index("dog"))
+print(animal.index("monkey"))
+print(animal.index("elephant"))
+print(animal.count("dog"))
+print(animal.count("monkey"))
+
+
