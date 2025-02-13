@@ -1,6 +1,6 @@
 function Button({text}) {
     return<>
-     <button>{text}</button>
+     <button >fetch post</button>
     </>
    
     
