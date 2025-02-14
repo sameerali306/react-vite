@@ -4,7 +4,7 @@ function Form() {
     const[password,setPassword]=useState("")
     const[loginStatus,setLoginStatus]=useState("null")
     const loginForm=useCallback(()=>{
-        if (email==="sameeraly@gmail.com" && password==="1234567") {
+        if (email==="sam@gmail.com" && password==="1234567") {
             setLoginStatus("loggon in successfully")
         }else{
             setLoginStatus("invalid email or passwore")

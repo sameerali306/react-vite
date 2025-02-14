@@ -1,7 +1,8 @@
-function Button({text}) {
-    return<>
-     <button >fetch post</button>
-    </>
+function Button() {
+    return(<>
+    <button onClick={fetchPosts}>Fetch Posts</button>
+      
+    </>)
    
     
 }
