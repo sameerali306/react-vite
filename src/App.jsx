@@ -54,43 +54,53 @@
 // // }
 // // export default App
 
-import Header from "./componet/Api3/header"
-import Paragraph from "./componet/Api3/paragraf"
-import PostItem from "./componet/Api3/post-item"
-import { useEffect, useState } from "react";
-function PostApiExample() {
-    const [post, setPost] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(false);
+// import Header from "./componet/Api3/header"
+// import Paragraph from "./componet/Api3/paragraf"
+// import PostItem from "./componet/Api3/post-item"
+// import { useEffect, useState } from "react";
+// function PostApiExample() {
+//     const [post, setPost] = useState([]);
+//     const [error, setError] = useState(null);
+//     const [loading, setLoading] = useState(false);
   
-    const fetchPosts = async () => {
-      setLoading(true);
-      try {
-        let response = await fetch("https://jsonplaceholder.typicode.com/posts");
-        if (!response.ok) {
-          throw new Error("failed to fetch!!");
-        }
-        let data = await response.json();
-        setPost(data);
-        console.log(data);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+//     const fetchPosts = async () => {
+//       setLoading(true);
+//       try {
+//         let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//         if (!response.ok) {
+//           throw new Error("failed to fetch!!");
+//         }
+//         let data = await response.json();
+//         setPost(data);
+//         console.log(data);
+//       } catch (error) {
+//         setError(error.message);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
   
-    return (
-      <>
-        <Header />
-        <button onClick={fetchPosts}>Fetch Posts</button>
-        {error && <Paragraph message={error} color="red" />}
-        {loading && <Paragraph message="Loading..." color="blue" />}
-        {post.map((item) => (
-          <PostItem key={item.id} post={item} />
-        ))}
-      </>
-    );
-  }
+//     return (
+//       <>
+//         <Header />
+//         <button onClick={fetchPosts}>Fetch Posts</button>
+//         {error && <Paragraph message={error} color="red" />}
+//         {loading && <Paragraph message="Loading..." color="blue" />}
+//         {post.map((item) => (
+//           <PostItem key={item.id} post={item} />
+//         ))}
+//       </>
+//     );
+//   }
 
-export default PostApiExample
+// export default PostApiExample
+
+
+import Memo from "./componet/useMemo";
+function App() {
+  return(
+    <Memo/>
+  )
+  
+}
+export default App
