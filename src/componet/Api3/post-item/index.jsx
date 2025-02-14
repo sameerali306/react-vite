@@ -1,4 +1,3 @@
-// PostItem.js
 function PostItem({ post }) {
     return (
       <div>

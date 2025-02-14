@@ -1,4 +1,3 @@
-// Paragraph.js
 function Paragraph({ message, color }) {
     return <p style={{ color: color }}>{message}</p>;
   }
