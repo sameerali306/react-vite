@@ -96,11 +96,29 @@
 // export default PostApiExample
 
 
-import Memo from "./componet/useMemo";
+// import Memo from "./componet/useMemo";
+// function App() {
+//   return(
+//     <Memo/>
+//   )
+  
+// }
+// export default App
+
+
+
+import React from "react";
+import TodoInput from "./componet/Todo";
+import "./App.css"
 function App() {
-  return(
-    <Memo/>
-  )
+  return<>
+  <div className="main-container">
+    <div className="center-container">
+    <TodoInput/>
+    </div>
+  </div>
+</>
+  
   
 }
 export default App
