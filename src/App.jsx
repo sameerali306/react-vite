@@ -107,18 +107,38 @@
 
 
 
-import React from "react";
-import TodoInput from "./componet/Todo";
-import "./App.css"
+import React, { useState } from "react";
+import TodoInput from "./componet/Todo";  // Fix the path if necessary
+import TodoList from "./componet/Todo/Todolist";  // Fix the path if necessary
+import "./App.css";
+
 function App() {
-  return<>
-  <div className="main-container">
-    <div className="center-container">
-    <TodoInput/>
+  const [list, setlist] = useState([]);
+
+  // Function to add new todo to the list
+  const addlist = (inputText) => {
+    setlist((prevList) => [...prevList, inputText]);
+  };
+
+  // Function to delete a todo item
+  const deleteTodo = (index) => {
+    setlist((prevList) => prevList.filter((_, i) => i !== index));
+  };
+
+  return (
+    <div className="main-container">
+      <div className="center-container">
+        <TodoInput addlist={addlist} />
+        <h1 className="app-heading">ToDo</h1>
+        <hr />
+        <ul>
+          {list.map((item, i) => (
+            <TodoList key={i} item={item} index={i} deleteTodo={deleteTodo} />
+          ))}
+        </ul>
+      </div>
     </div>
-  </div>
-</>
-  
-  
+  );
 }
-export default App
+
+export default App;

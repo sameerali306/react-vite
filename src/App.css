@@ -251,35 +251,113 @@ border-radius: 400px;
   background-color: hsl(205, 90%, 50%);
 } */
 
-*{
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
   margin: 0;
   padding: 0;
-}
-body{
-  background-color: #333;
-}
-.main-container{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.center-cantainer{
-  height: 500px;
-  width: 300px;
+
+/* Main container for centering the content */
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.Input-box-Todo{
-  background-color: white;
-  margin: 10px;
-  border-radius: 100px;
-  height: 30px;
-  width: 200px;
+
+/* Centering the content inside the container */
+.center-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
 }
-.add-button{
-  background-color: blue;
-  border-radius: 100px;
-  height: 30px;
-  width: 30px;
+
+/* Heading styles */
+.app-heading {
+  font-size: 36px;
+  margin: 0 0 20px;
+  color: #333;
+}
+
+/* Input box and button container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.Input-box-Todo {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.Input-box-Todo:focus {
+  border-color: #4CAF50;
+}
+
+/* Add button */
+.add-button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #4CAF50;
   color: white;
-  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the To-Do List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+  background-color: #e9e9e9;
+  transform: scale(1.05);
+}
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  outline: none;
+}
+
+.delete-button:hover {
+  color: #c0392b;
 }
