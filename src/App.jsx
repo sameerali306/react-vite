@@ -107,38 +107,77 @@
 
 
 
-import React, { useState } from "react";
-import TodoInput from "./componet/Todo";  // Fix the path if necessary
-import TodoList from "./componet/Todo/Todolist";  // Fix the path if necessary
-import "./App.css";
+// import React, { useState } from "react";
+// import TodoInput from "./componet/Todo";  // Fix the path if necessary
+// import TodoList from "./componet/Todo/Todolist";  // Fix the path if necessary
+// import "./App.css";
 
+// function App() {
+//   const [list, setlist] = useState([]);
+
+//   // Function to add new todo to the list
+//   const addlist = (inputText) => {
+//     setlist((prevList) => [...prevList, inputText]);
+//   };
+
+//   // Function to delete a todo item
+//   const deleteTodo = (index) => {
+//     setlist((prevList) => prevList.filter((Todo, i) => i !== index));
+//   };
+
+//   return (
+//     <div className="main-container">
+//       <div className="center-container">
+//         <TodoInput addlist={addlist} />
+//         <h1 className="app-heading">ToDo</h1>
+//         <hr />
+//         <ul>
+//           {list.map((item, i) => (
+//             <TodoList key={i} item={item} index={i} deleteTodo={deleteTodo} />
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+// import React, { useRef } from 'react';
+
+// function FocusInput() {
+//   const inputRef = useRef(null);
+
+//   const focusInput = () => {
+//     if (inputRef.current) {
+//       inputRef.current.focus();
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <input ref={inputRef} type="text" />
+//       <button onClick={focusInput}>Focus Input</button>
+//     </div>
+//   );
+// }
+
+// export default FocusInput;
+
+
+
+import Hooks from "./componet/Memo";
+import "./App.css"
+import { useState } from "react";
 function App() {
-  const [list, setlist] = useState([]);
 
-  // Function to add new todo to the list
-  const addlist = (inputText) => {
-    setlist((prevList) => [...prevList, inputText]);
-  };
-
-  // Function to delete a todo item
-  const deleteTodo = (index) => {
-    setlist((prevList) => prevList.filter((_, i) => i !== index));
-  };
-
-  return (
-    <div className="main-container">
-      <div className="center-container">
-        <TodoInput addlist={addlist} />
-        <h1 className="app-heading">ToDo</h1>
-        <hr />
-        <ul>
-          {list.map((item, i) => (
-            <TodoList key={i} item={item} index={i} deleteTodo={deleteTodo} />
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
+  return(
+    <>
+    <Hooks/>
+    </>
+  )
+  
 }
-
-export default App;
+export default App

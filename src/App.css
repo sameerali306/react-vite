@@ -251,8 +251,12 @@ border-radius: 400px;
   background-color: hsl(205, 90%, 50%);
 } */
 
+
+
+
+/* TODO APP STYLING */
 /* General body styles */
-body {
+/* body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9;
   margin: 0;
@@ -261,20 +265,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 
 /* Main container for centering the content */
-.main-container {
+/* .main-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-}
+} */
 
 /* Centering the content inside the container */
-.center-container {
+/* .center-container {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -282,23 +286,23 @@ body {
   max-width: 400px;
   padding: 20px;
   text-align: center;
-}
+} */
 
 /* Heading styles */
-.app-heading {
+/* .app-heading {
   font-size: 36px;
   margin: 0 0 20px;
   color: #333;
-}
+} */
 
 /* Input box and button container */
-.input-container {
+/* .input-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-}
+} */
 
-.Input-box-Todo {
+/* .Input-box-Todo {
   width: 80%;
   padding: 10px;
   font-size: 16px;
@@ -310,11 +314,11 @@ body {
 
 .Input-box-Todo:focus {
   border-color: #4CAF50;
-}
+} */
 
 /* Add button */
-.add-button {
-  padding: 12px;
+/* .add-button { */
+  /* padding: 12px;
   font-size: 18px;
   background-color: #4CAF50;
   color: white;
@@ -329,14 +333,14 @@ body {
 }
 
 /* Styles for the To-Do List */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+/* ul {
+  list-style-type: none; */
+  /* padding: 0; */
+/* } */ 
 
-ul li {
-  background-color: #f9f9f9;
-  margin: 10px 0;
+/* ul li { */
+  /* background-color: #f9f9f9; */
+  /* margin: 10px 0;
   padding: 10px;
   font-size: 18px;
   border-radius: 5px;
@@ -359,5 +363,65 @@ ul li:hover {
 }
 
 .delete-button:hover {
-  color: #c0392b;
-}
+  color: #c0392b;}
+
+
+
+
+  /* USE MEMO STYLING */
+
+  .body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .Header {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .btn, .btn1 {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn1 {
+    background-color: #f44336;
+  }
+  
+  .btn:hover, .btn1:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  
+  span {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  
