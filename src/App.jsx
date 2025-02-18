@@ -168,16 +168,28 @@
 
 
 
-import Hooks from "./componet/Memo";
-import "./App.css"
-import { useState } from "react";
-function App() {
+// import Hooks from "./componet/Memo";
+// import "./App.css"
+// import { useState } from "react";
+// function App() {
 
+//   return(
+//     <>
+//     <Hooks/>
+//     </>
+//   )
+  
+// }
+// export default App
+
+
+import Input from "./componet/Ref/index2"
+function App() {
   return(
-    <>
-    <Hooks/>
-    </>
+    <Input/>
   )
+ 
+
   
 }
 export default App
