@@ -196,27 +196,18 @@
 
 
 
-
-import { useState, useEffect, useRef } from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import useToggle from './componet/custom';
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
-  const count = useRef(0);
-
-  useEffect(() => {
-    count.current = count.current + 1;
-  });
+  const [isToggled, toggle] = useToggle(false); // Use the custom hook
 
   return (
-    <>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <h1>Render Count: {count.current}</h1>
-    </>
+    <div>
+      <h1>{isToggled ? 'The switch is ON!' : 'The switch is OFF!'}</h1>
+      <button onClick={toggle}>Toggle</button>
+    </div>
   );
 }
-export default App
+
+export default App;
