@@ -195,20 +195,34 @@
 // export default App
 
 
-import MyComponent from "./componet/Ref";
-import { NavLink } from "react-router";
-import { BrowserRouter, Routes, Route } from "react-router";
-import Card from "./componet/unmount";
-function App() {
-  return(
-    <BrowserRouter>
-    <Routes>
-      <Route path="all-post" element={<MyComponent/>} />
-      <Route path="post" element={<Card/>}/>
-    </Routes>
-  </BrowserRouter>
-  )
+// import MyComponent from "./componet/Ref";
+// import { NavLink } from "react-router";
+// import { BrowserRouter, Routes, Route } from "react-router";
+// import Card from "./componet/unmount";
+// function App() {
+//   return(
+//     <BrowserRouter>
+//     <Routes>
+//       <Route path="all-post" element={<MyComponent/>} />
+//       <Route path="post" element={<Card/>}/>
+//     </Routes>
+//   </BrowserRouter>
+//   )
   
+// }
+// export default App
+
+
+import React from 'react'
+import Counter from './componet/custom_hook'
+
+function App() {
+  return (
+    <div>
+      <Counter/>
+    </div>
+  )
 }
+
 export default App
 
