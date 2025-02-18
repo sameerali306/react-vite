@@ -195,19 +195,20 @@
 // export default App
 
 
-
-import React from 'react';
-import useToggle from './componet/custom';
-
+import MyComponent from "./componet/Ref";
+import { NavLink } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
+import Card from "./componet/unmount";
 function App() {
-  const [isToggled, toggle] = useToggle(false); // Use the custom hook
-
-  return (
-    <div>
-      <h1>{isToggled ? 'The switch is ON!' : 'The switch is OFF!'}</h1>
-      <button onClick={toggle}>Toggle</button>
-    </div>
-  );
+  return(
+    <BrowserRouter>
+    <Routes>
+      <Route path="all-post" element={<MyComponent/>} />
+      <Route path="post" element={<Card/>}/>
+    </Routes>
+  </BrowserRouter>
+  )
+  
 }
+export default App
 
-export default App;
