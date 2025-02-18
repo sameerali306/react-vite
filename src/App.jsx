@@ -213,16 +213,34 @@
 // export default App
 
 
-import React from 'react'
-import Counter from './componet/custom_hook'
+// import React from 'react'
+// import Counter from './componet/custom_hook'
 
-function App() {
+// function App() {
+//   return (
+//     <div>
+//       <Counter/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// 
+
+import { NavLink } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
+
+const App = () => {
   return (
-    <div>
-      <Counter/>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h2>Home Page</h2>} />
+        <Route path="/about" element={<h2>About Page</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
-
+export default App;
