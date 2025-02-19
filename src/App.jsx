@@ -227,20 +227,55 @@
 // export default App
 
 
-// 
+// router examle 
 
-import { NavLink } from "react-router";
-import { BrowserRouter, Routes, Route } from "react-router";
+// import { NavLink } from "react-router";
+// import { BrowserRouter, Routes, Route } from "react-router";
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route path="/" element={<h2>Home Page</h2>} />
+//         <Route path="/about" element={<h2>About Page</h2>} />
+//       </Routes>
+//     </BrowserRouter>
+//   );
+// };
+
+// export default App;
+
+
+// customhook example
+import React from 'react';
+import useToggle from './componet/custom';
+
+function App() {
+  const [isToggled, toggle] = useToggle();
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<h2>Home Page</h2>} />
-        <Route path="/about" element={<h2>About Page</h2>} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <p>{isToggled ? 'Toggled ON' : 'Toggled OFF'}</p>
+      <button onClick={toggle}>Toggle</button>
+    </div>
   );
-};
+}
 
 export default App;
+
+
+// useCallback
+// import React from 'react'
+// import Call from './componet/CallBack_hook'
+// import"./App.css"
+
+// function App() {
+//   return (
+//     <div>
+//       <Call/>
+//     </div>
+//   )
+// }
+
+// export default App
+
