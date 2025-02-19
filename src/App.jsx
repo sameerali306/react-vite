@@ -50,7 +50,7 @@
 // //  return(
 // //   <Form/>
 // //  ) 
-  
+
 // // }
 // // export default App
 
@@ -62,7 +62,7 @@
 //     const [post, setPost] = useState([]);
 //     const [error, setError] = useState(null);
 //     const [loading, setLoading] = useState(false);
-  
+
 //     const fetchPosts = async () => {
 //       setLoading(true);
 //       try {
@@ -79,7 +79,7 @@
 //         setLoading(false);
 //       }
 //     };
-  
+
 //     return (
 //       <>
 //         <Header />
@@ -101,7 +101,7 @@
 //   return(
 //     <Memo/>
 //   )
-  
+
 // }
 // export default App
 
@@ -178,7 +178,7 @@
 //     <Hooks/>
 //     </>
 //   )
-  
+
 // }
 // export default App
 
@@ -188,9 +188,9 @@
 //   return(
 //     <Input/>
 //   )
- 
 
-  
+
+
 // }
 // export default App
 
@@ -208,7 +208,7 @@
 //     </Routes>
 //   </BrowserRouter>
 //   )
-  
+
 // }
 // export default App
 
@@ -302,42 +302,70 @@
 
 
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router";
+// import React from 'react';
+// import { BrowserRouter as Router, Route, Link, Routes } from "react-router";
 
-// Home component
-function Home() {
-  return <h2>Home Page</h2>;
-}
+// // Home component
+// function Home() {
+//   return <h2>Home Page</h2>;
+// }
 
-// About component
-function About() {
-  return <h2>About Page</h2>;
-}
+// // About component
+// function About() {
+//   return <h2>About Page</h2>;
+// }
 
-// App component with routing
+// // App component with routing
+// function App() {
+//   return (
+//     <Router>
+//       <div>
+//         <nav>
+//           <ul>
+//             <li>
+//               <Link to="/">Home</Link>
+//             </li>
+//             <li>
+//               <Link to="/about">About</Link>
+//             </li>
+//           </ul>
+//         </nav>
+
+//         <Routes>
+//           <Route path="/" element={<Home />} />
+//           <Route path="/about" element={<About />} />
+//         </Routes>
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+// import React from 'react';
+import { BrowserRouter , Route, Link, Routes } from "react-router";
+
+import Home from './componet/router/Home';
+import About from './componet/router/About';
+import Contact from './componet/router/Contact.';
+import React from 'react'
+
 function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
+    <div>
+      <BrowserRouter>
+   <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path='/Contact' element={<Contact/>}/>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+
+       </Routes>
+   </BrowserRouter>
+    </div>
+  )
 }
 
-export default App;
+export default App
+
