@@ -425,19 +425,66 @@ ul li:hover {
   }
   
    */
+   
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-   .app{
-    margin-left: 600px;
-    margin-top: 100px;
-   }
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-   .app h1{
-    font-weight: 800;
-    font-size: larger;
-   }
-   .app button{
-    background-color: green;
-    padding: 3px;
-    width: 100px;
-    border-radius: 100px;
-   }
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 36px;
+}
+
+   
