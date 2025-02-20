@@ -1,5 +1,5 @@
 // src/components/Home.js
-import { Link } from "react-router";
+import { Link,Outlet } from "react-router";
 import React from "react";
 
 const Home = () => {
