@@ -349,19 +349,23 @@
 // import About from './componet/router/About';
 // import Contact from './componet/router/Contact.';
 // import React from 'react'
+// import CardComponent from "./componet/router";
+
 
 // function App() {
 //   return (
 //     <div>
-//       <BrowserRouter>
+      
+//       <CardComponent/>
 //    <Routes>
+   
 //       <Route path="/" element={<Home />} />
 //       <Route path="/about" element={<About />} />
 //       <Route path='/Contact' element={<Contact/>}/>
 
 
 //        </Routes>
-//    </BrowserRouter>
+  
 //     </div>
 //   )
 // }
@@ -369,15 +373,14 @@
 // export default App
 
 
-import Card from "./componet/router";
-// import React from 'react'
+import Tailwind from "./componet/tailwind";
+import React from 'react'
+import"./App.css"
 
 function App() {
   return (
     <div>
-      <Card />
-
-      
+      <Tailwind/>
     </div>
   )
 }

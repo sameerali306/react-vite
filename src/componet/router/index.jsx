@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react'
+import { Link } from 'react-router'
 
-function Card() {
+function CardComponent() {
   return (
     <div className='app'>
+   
       <nav>
-        <h1>Logo</h1>
+        <h1><Link to={"/"}>Logo</Link></h1>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
@@ -17,5 +18,5 @@ function Card() {
   );
 }
 
-export default Card;
+export default CardComponent;
 

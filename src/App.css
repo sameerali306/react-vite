@@ -427,7 +427,7 @@ ul li:hover {
    */
    
 /* styles.css */
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -487,4 +487,8 @@ h1 {
   font-size: 36px;
 }
 
-   
+    */
+
+.app{
+  display: flex;
+}
