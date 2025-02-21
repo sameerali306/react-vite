@@ -5,10 +5,9 @@ function Component() {
   return (
     <div>
        <nav className="bg-green-500 text-2xl text-white pt-4 mt-6 mx-4 flex items-center justify-between">
-  {/* <!-- Logo Section --> */}
   <h1 className="text-6xl">Logo</h1>
 
-  {/* <!-- Navigation Menu --> */}
+
   <ul className="flex items-center space-x-6">
   <li>
   <Link to="/" className="text-white hover:text-gray-200 cursor-pointer"><i className="fas fa-home mr-2"></i></Link>
