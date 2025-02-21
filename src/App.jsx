@@ -373,14 +373,47 @@
 // export default App
 
 
-import Tailwind from "./componet/tailwind";
+// import Tailwind from "./componet/tailwind";
+// import React from 'react'
+// import"./App.css"
+
+// function App() {
+//   return (
+//     <div>
+//       <Tailwind/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+import { BrowserRouter , Route, Link, Routes } from "react-router";
+import Home from './componet/router/router3/Home';
+import About from './componet/router/router3/About';
+import Contact from './componet/router/router3/Contact';
+import Video from "./componet/router/router3/Video";
 import React from 'react'
-import"./App.css"
+import Component from "./componet/router/router3";
+
 
 function App() {
   return (
     <div>
-      <Tailwind/>
+      
+      <Component/>
+   <Routes>
+   
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path='/Contact' element={<Contact/>}/>
+      <Route path="/video" element={<Video/>}/>
+
+
+       </Routes>
+  
     </div>
   )
 }
