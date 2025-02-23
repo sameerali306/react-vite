@@ -390,34 +390,52 @@
 
 
 
-import { BrowserRouter , Route, Link, Routes } from "react-router";
-import Home from './componet/router/router3/Home';
-import About from './componet/router/router3/About';
-import Contact from './componet/router/router3/Contact';
-import Video from "./componet/router/router3/Video";
+// import { BrowserRouter , Route, Link, Routes } from "react-router";
+// import Home from './componet/router/router3/Home';
+// import About from './componet/router/router3/About';
+// import Contact from './componet/router/router3/Contact';
+// import Video from "./componet/router/router3/Video";
+// import React from 'react'
+// import Component from "./componet/router/router3";
+
+
+// function App() {
+//   return (
+
+//     <div>
+//        <h1 class="text-3xl font-bold underline">
+//     Hello world!
+//   </h1>
+      
+//       <Component/>
+//    <Routes>
+   
+//       <Route path="/" element={<Home />} />
+//       <Route path="/about" element={<About />} />
+//       <Route path='/Contact' element={<Contact/>}/>
+//       <Route path="/video" element={<Video/>}/>
+
+
+//        </Routes>
+  
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
 import React from 'react'
-import Component from "./componet/router/router3";
+import Card from './componet/states/useState/index copy'
+import"./input.css"
 
 
 function App() {
   return (
-
     <div>
-       <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-      
-      <Component/>
-   <Routes>
-   
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path='/Contact' element={<Contact/>}/>
-      <Route path="/video" element={<Video/>}/>
-
-
-       </Routes>
-  
+      <Card/>
     </div>
   )
 }
