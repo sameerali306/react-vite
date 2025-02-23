@@ -427,10 +427,9 @@
 
 
 
-import React from 'react'
-import Card from './componet/states/useState/index copy'
-import"./input.css"
 
+import React from 'react'
+import Card from './componet/states/usestate2'
 
 function App() {
   return (
@@ -441,3 +440,4 @@ function App() {
 }
 
 export default App
+
