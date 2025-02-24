@@ -441,27 +441,40 @@
 
 // export default App
 
-import Card from "./componet/nastedRouting";
+// import Card from "./componet/nastedRouting";
+// import React from 'react'
+// import Home from "./componet/nastedRouting/Home";
+// import About from "./componet/nastedRouting/About";
+// import Contact from "./componet/nastedRouting/Contact";
+// import { Route, Routes } from "react-router";
+
+// function App() {
+//   return (
+//     <div>
+//       <Card/>
+//       <Routes>
+//         <Route path="/" element={<Home/>}/>
+//         <Route path="/about" element={<About/>}/>
+//         <Route path="/contact" element={<Contact/>}/>
+//       </Routes>
+      
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import Card from "./componet/states/Memo";
 import React from 'react'
-import Home from "./componet/nastedRouting/Home";
-import About from "./componet/nastedRouting/About";
-import Contact from "./componet/nastedRouting/Contact";
-import { Route, Routes } from "react-router";
 
 function App() {
   return (
     <div>
       <Card/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-      </Routes>
-      
     </div>
   )
 }
 
 export default App
-
-
