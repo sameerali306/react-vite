@@ -429,12 +429,12 @@
 
 
 import React from 'react'
-import Card from './componet/states/usestate2'
+import Hook2 from './componet/states/useEffect'
 
 function App() {
   return (
     <div>
-      <Card/>
+      <Hook2/>
     </div>
   )
 }
