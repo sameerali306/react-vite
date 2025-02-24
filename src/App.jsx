@@ -428,16 +428,40 @@
 
 
 
+// import React from 'react'
+// import Ref2 from './componet/states/useRef/useRef2'
+
+// function App() {
+//   return (
+//     <div>
+//       <Ref2/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import Card from "./componet/nastedRouting";
 import React from 'react'
-import Ref2 from './componet/states/useRef/useRef2'
+import Home from "./componet/nastedRouting/Home";
+import About from "./componet/nastedRouting/About";
+import Contact from "./componet/nastedRouting/Contact";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
     <div>
-      <Ref2/>
+      <Card/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      </Routes>
+      
     </div>
   )
 }
 
 export default App
+
 
