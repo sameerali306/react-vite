@@ -466,15 +466,26 @@
 
 
 
-import Card from "./componet/states/Memo";
-import React from 'react'
+import React, { useCallback, useState } from 'react';
+import Header from './componet/states/Memo/memo2';
+
 
 function App() {
+  const [Counter, setcounter] = useState(0);
+const newfn=useCallback(()=>{},[])
   return (
-    <div>
-      <Card/>
+    <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
+      <Header newfn={newfn}/>
+      <h1 className="text-4xl font-semibold text-blue-600 mb-4">{Counter}</h1>
+      <button
+        onClick={() => setcounter(Counter + 1)}
+        className="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
+      >
+        Click Me
+      </button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
