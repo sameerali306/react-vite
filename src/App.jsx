@@ -355,17 +355,17 @@
 // function App() {
 //   return (
 //     <div>
-      
+
 //       <CardComponent/>
 //    <Routes>
-   
+
 //       <Route path="/" element={<Home />} />
 //       <Route path="/about" element={<About />} />
 //       <Route path='/Contact' element={<Contact/>}/>
 
 
 //        </Routes>
-  
+
 //     </div>
 //   )
 // }
@@ -406,10 +406,10 @@
 //        <h1 class="text-3xl font-bold underline">
 //     Hello world!
 //   </h1>
-      
+
 //       <Component/>
 //    <Routes>
-   
+
 //       <Route path="/" element={<Home />} />
 //       <Route path="/about" element={<About />} />
 //       <Route path='/Contact' element={<Contact/>}/>
@@ -417,7 +417,7 @@
 
 
 //        </Routes>
-  
+
 //     </div>
 //   )
 // }
@@ -457,7 +457,7 @@
 //         <Route path="/about" element={<About/>}/>
 //         <Route path="/contact" element={<Contact/>}/>
 //       </Routes>
-      
+
 //     </div>
 //   )
 // }
@@ -490,16 +490,41 @@
 // export default App;
 
 
-import React from 'react'
-import Callback from './componet/states/useCallback'
+// import React from 'react'
+// import Callback from './componet/states/useCallback'
 
+// function App() {
+//   return (
+//     <div>
+//       <Callback/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+import Hello from './componet/router/route4'
+import { Routes ,Route } from 'react-router'
+import Home from './componet/router/route4/Home'
+import About from './componet/router/route4/About'
+import Contact from './componet/router/route4/Contact'
 function App() {
   return (
     <div>
-      <Callback/>
+     <Hello/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+    <Route path="/about" element={<About/>}/>
+    <Route path="/contact" element={<Contact/>}/>
+
+      </Routes>
     </div>
   )
 }
 
 export default App
+
 

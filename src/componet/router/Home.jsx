@@ -4,13 +4,13 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <Link to={"/"}>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home page!</p>
-      </Link>
-     
-    </div>
+    <div className='max-w-4xl mx-auto p-6'>
+    <h1 className='text-3xl font-semibold text-gray-800 mb-4'>I am Home page</h1>
+    <p className='text-lg text-gray-600 leading-relaxed'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, ea?
+    </p>
+  </div>
+  
   );
 };
 
