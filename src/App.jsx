@@ -505,27 +505,40 @@
 
 
 
-import React from 'react'
-import Hello from './componet/router/route4'
-import { Routes ,Route } from 'react-router'
-import Home from './componet/router/route4/Home'
-import About from './componet/router/route4/About'
-import Contact from './componet/router/route4/Contact'
+// import React from 'react'
+// import Hello from './componet/router/route4'
+// import { Routes ,Route } from 'react-router'
+// import Home from './componet/router/route4/Home'
+// import About from './componet/router/route4/About'
+// import Contact from './componet/router/route4/Contact'
 
+// function App() {
+//   return (
+//     <div>
+//      <Hello/>
+//       <Routes>
+//         <Route path="/" element={<Home/>}/>
+//     <Route path="/about" element={<About/>}/>
+//     <Route path="/contact" element={<Contact/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+import React from 'react'
+import Props from './componet/props/Props'
 function App() {
   return (
-    <div>
-     <Hello/>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-    <Route path="/about" element={<About/>}/>
-    <Route path="/contact" element={<Contact/>}/>
-
-      </Routes>
+    <div className='bg-amber-400'>
+      <Props  fname={"sameer ali"}/>
+      <Props fname={"ehsan"}/>
+      <Props fname={"shahzain alam"}/>
     </div>
   )
 }
 
 export default App
-
-
