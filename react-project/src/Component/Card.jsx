@@ -1,5 +1,6 @@
-function Card({ userName,button, bgImage }) {
+function Card({ userName,button="Name button", bgImage }) {
   return (
+    
     <div className="w-48  bg-red-400 flex m-5  bg-cover bg-center rounded-md  shadow-lg "  style={{ backgroundImage: `url(${bgImage})` }}
 >
       <div className="flex flex-col mt-40">
@@ -9,6 +10,7 @@ function Card({ userName,button, bgImage }) {
       </div>
       
     </div>
+
   );
 }
 

@@ -4,7 +4,7 @@ import Card from "./Component/Card"
 function App() {
 return(
   <>
- <div className="flex flex-row flex-wrap">
+ <div className="flex flex-row flex-wrap ">
   <Card userName={"Sameer Ali"} button={"Clicked me"} bgImage="./src/assets/image.jpg" />
  <Card userName={"Faria Hussain"} button={"Login"} bgImage="./src/assets/image2.jpg" />
  <Card userName={"Umair Ali"} button={"Double click"} bgImage="./src/assets/image3.jpg" />
