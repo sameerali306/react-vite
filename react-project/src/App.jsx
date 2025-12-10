@@ -1,5 +1,6 @@
 import Color from "./bgChanger/Color"
 import Card from "./Component/Card"
+import Password from "./Password-generator/Password"
 
 
 function App() {
@@ -17,8 +18,13 @@ function App() {
 //   )
 
 return(
-  <Color/>
+  // <Color/>
+  <Password/>
 )
-  
+
+// return(
+//   <Password/>
+// )
+
 }
 export default App
