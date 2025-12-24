@@ -1,30 +1,22 @@
-import Color from "./bgChanger/Color"
-import Card from "./Component/Card"
-import Password from "./Password-generator/Password"
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
+function Home() {
+  return <h2>Hello! You are in Home Page.</h2>;
+}
 
 function App() {
-// return(
-//   <>
-//  <div className="flex flex-row flex-wrap ">
-//   <Card userName={"Sameer Ali"} button={"Clicked me"} bgImage="./src/assets/image.jpg" />
-//  <Card userName={"Faria Hussain"} button={"Login"} bgImage="./src/assets/image2.jpg" />
-//  <Card userName={"Umair Ali"} button={"Double click"} bgImage="./src/assets/image3.jpg" />
-//  <Card userName={"Ria"} button={"Sign Up"} bgImage="./src/assets/image4.jpg" />
-//  <Card userName={"Faris"} button={"Sign In"} bgImage="./src/assets/image5.jpg" />
- 
-//  </div>
-//  </>
-//   )
+  return (
+    <>
+      <nav>
+        <Link to="/">Home</Link>
+      </nav>
 
-return(
-  // <Color/>
-  <Password/>
-)
-
-// return(
-//   <Password/>
-// )
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </>
+  );
 }
-export default App
+
+export default App;
