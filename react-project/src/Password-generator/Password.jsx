@@ -6,7 +6,7 @@ function Password() {
     const [CharacterAllowed, setCharacterAllowed]=useState(false)
     const [password, setpassword]=useState("")
 
-    const [passwordRef]=useRef(null)
+    const passwordRef=useRef(null)
 
     const PasswordGenerator=useCallback(()=>{
         let pass=""
@@ -51,7 +51,7 @@ function Password() {
             />
             <button
             onClick={CopyPasswordToClipBoard}
-            className=' outline-none bg-blue-600 px-3 py-0.5 shrink-0 rounded hover:bg-red-700 cursor-pointer text-gray-200 px-3 py-0.5 shrink-0 rounded'>Copy</button>
+            className=' outline-none bg-blue-600 "px-3" "py-0.5" "shrink-0 rounded" hover:bg-red-700 cursor-pointer text-gray-200 px-3 py-0.5 shrink-0 rounded'>Copy</button>
 
 
         </div>

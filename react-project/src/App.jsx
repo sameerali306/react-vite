@@ -1,22 +1,14 @@
-import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-
-function Home() {
-  return <h2>Hello! You are in Home Page.</h2>;
-}
-
-function App() {
+import Navbar from "./Navbar";
+import Text from "./Texttransform/Text";
+export default function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      {/* <Navbar nam="222"/> */}
+      {/* <Card userName={"sameer"} /> */}
+     <Text header="Enter the text below"/>
     </>
   );
 }
 
-export default App;
+
+
