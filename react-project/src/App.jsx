@@ -1,30 +1,14 @@
-import Color from "./bgChanger/Color"
-import Card from "./Component/Card"
-import Password from "./Password-generator/Password"
-
-
-function App() {
-// return(
-//   <>
-//  <div className="flex flex-row flex-wrap ">
-//   <Card userName={"Sameer Ali"} button={"Clicked me"} bgImage="./src/assets/image.jpg" />
-//  <Card userName={"Faria Hussain"} button={"Login"} bgImage="./src/assets/image2.jpg" />
-//  <Card userName={"Umair Ali"} button={"Double click"} bgImage="./src/assets/image3.jpg" />
-//  <Card userName={"Ria"} button={"Sign Up"} bgImage="./src/assets/image4.jpg" />
-//  <Card userName={"Faris"} button={"Sign In"} bgImage="./src/assets/image5.jpg" />
- 
-//  </div>
-//  </>
-//   )
-
-return(
-  // <Color/>
-  <Password/>
-)
-
-// return(
-//   <Password/>
-// )
-
+import Navbar from "./Navbar";
+import Text from "./Texttransform/Text";
+export default function App() {
+  return (
+    <>
+      {/* <Navbar nam="222"/> */}
+      {/* <Card userName={"sameer"} /> */}
+     <Text header="Enter the text below"/>
+    </>
+  );
 }
-export default App
+
+
+

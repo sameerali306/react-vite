@@ -1,10 +1,12 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 function Password() {
     const [length , setlength]=useState(8)
     const [NumberAllowed, setNumberAllowed]=useState(false)
     const [CharacterAllowed, setCharacterAllowed]=useState(false)
     const [password, setpassword]=useState("")
+
+    const passwordRef=useRef(null)
 
     const PasswordGenerator=useCallback(()=>{
         let pass=""
@@ -20,6 +22,12 @@ function Password() {
 
          setpassword(pass)
          },[length,NumberAllowed,CharacterAllowed,setpassword])
+
+         const CopyPasswordToClipBoard=useCallback(()=>{
+            passwordRef.current?.select() //this method select the pasword that is in the input box
+            passwordRef.current?.setSelectionRange(0,100) //by setSelectRange mmethod we give a range of how many character we have to select
+            window.navigator.clipboard.writeText(password) //copy the text that is store in the password variable
+         },[password])
 
          useEffect(()=>{
             PasswordGenerator()
@@ -38,9 +46,12 @@ function Password() {
             placeholder='password'
 
             readOnly
+            ref={passwordRef}
             
             />
-            <button className='outline-none bg-blue-600 px-3 py-0.5 shrink-0 rounded'>Copy</button>
+            <button
+            onClick={CopyPasswordToClipBoard}
+            className=' outline-none bg-blue-600 "px-3" "py-0.5" "shrink-0 rounded" hover:bg-red-700 cursor-pointer text-gray-200 px-3 py-0.5 shrink-0 rounded'>Copy</button>
 
 
         </div>
